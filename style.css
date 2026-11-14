@@ -76,3 +76,10 @@
 @media(max-width:900px){.ceo-grid{gap:6%}.ceo-photo{min-height:470px}}
 @media(max-width:700px){.ceo-grid{grid-template-columns:1fr;gap:48px}.ceo-photo-wrap{width:calc(100% - 18px);max-width:420px;margin:0 auto}.ceo-photo{min-height:450px}.ceo-photo-note{right:-17px}.ceo-copy{text-align:left}.ceo-name{margin-top:24px}}
 @media(prefers-reduced-motion:no-preference){.ceo-photo{animation:ceoReveal .9s ease both}@keyframes ceoReveal{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}}
+
+
+.developer-credit{display:block;flex-basis:100%;text-align:center;margin-top:16px;padding-top:14px;border-top:1px solid #263344;color:#aab3bd;font-size:10px;letter-spacing:.04em}
+.developer-credit strong{color:#d7c39e;font-weight:700}
+.developer-credit a{color:#d7c39e;transition:color .2s}
+.developer-credit a:hover{color:#fff}
+@media(max-width:700px){.developer-credit{line-height:1.8;margin-top:8px}}
