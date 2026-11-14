@@ -33,19 +33,19 @@
 @media(prefers-reduced-motion:reduce){.whatsapp-float{animation:none}}
 
 
-/* Moving cargo photography strip */
-.cargo-motion{overflow:hidden;background:#f6f4ef;padding:82px 0 88px}
-.cargo-heading{display:flex;align-items:end;justify-content:space-between;gap:40px;margin-bottom:35px}
-.cargo-heading h2{font-size:clamp(34px,4vw,49px)}
-.cargo-heading>p{max-width:360px;margin:0 0 5px;color:var(--muted);font-size:13px;line-height:1.85}
-.cargo-marquee{width:100%;overflow:hidden;position:relative}
-.cargo-track{display:flex;gap:18px;width:max-content;animation:cargoGlide 48s linear infinite}
-.cargo-marquee:hover .cargo-track{animation-play-state:paused}
-.cargo-shot{position:relative;flex:0 0 330px;height:225px;overflow:hidden;border-radius:5px;background:#172b43}
-.cargo-shot:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,#071626b8,transparent 58%)}
-.cargo-shot img{width:100%;height:100%;display:block;object-fit:cover;transition:transform .7s ease}
-.cargo-shot:hover img{transform:scale(1.07)}
-.cargo-shot span{position:absolute;z-index:1;left:21px;bottom:18px;color:#fff;font-size:10px;font-weight:700;letter-spacing:.17em}
-@keyframes cargoGlide{from{transform:translateX(0)}to{transform:translateX(calc(-50% - 9px))}}
-@media(max-width:700px){.cargo-motion{padding:65px 0}.cargo-heading{display:block;margin-bottom:25px}.cargo-heading>p{margin-top:16px}.cargo-shot{flex-basis:270px;height:190px}.cargo-track{gap:13px;animation-duration:40s}}
-@media(prefers-reduced-motion:reduce){.cargo-track{animation:none}.cargo-marquee{overflow-x:auto}.cargo-shot img{transition:none}}
+
+
+/* Hero cargo background slideshow */
+.hero{isolation:isolate;overflow:hidden;background-image:none;background-color:#152b43}
+.hero-slideshow{position:absolute;inset:0;z-index:0;overflow:hidden}
+.hero-slide{position:absolute;inset:0;background-size:cover;background-position:center;opacity:0;transform:scale(1.035);animation:heroCrossfade 35s infinite ease-in-out;will-change:opacity,transform}
+.hero-slide.slide-one{animation-delay:0s}
+.hero-slide.slide-two{animation-delay:7s}
+.hero-slide.slide-three{animation-delay:14s}
+.hero-slide.slide-four{animation-delay:21s}
+.hero-slide.slide-five{animation-delay:28s}
+.hero-shade{z-index:1}
+.hero-content,.hero-index{z-index:2}
+@keyframes heroCrossfade{0%{opacity:0;transform:scale(1.035)}5%{opacity:1}20%{opacity:1;transform:scale(1)}25%{opacity:0;transform:scale(1.015)}100%{opacity:0}}
+@media(max-width:700px){.hero-slide{background-position:center;background-size:cover}.hero-shade{background:linear-gradient(90deg,rgba(8,20,34,.92),rgba(8,20,34,.66))}}
+@media(prefers-reduced-motion:reduce){.hero-slide{animation:none;opacity:0}.hero-slide.slide-one{opacity:1;transform:none}}
