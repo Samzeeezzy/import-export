@@ -83,3 +83,9 @@
 .developer-credit a{color:#d7c39e;transition:color .2s}
 .developer-credit a:hover{color:#fff}
 @media(max-width:700px){.developer-credit{line-height:1.8;margin-top:8px}}
+
+
+/* Charcoal export product card */
+.charcoal-photo{background:radial-gradient(ellipse at 52% 65%,#62605b 0%,#292a2a 36%,#171d23 72%,#101f32 100%);position:relative;isolation:isolate}
+.charcoal-photo:before{content:"";position:absolute;inset:22% 18% 16%;background:radial-gradient(ellipse at 25% 60%,#77736b 0 9%,transparent 10%),radial-gradient(ellipse at 57% 42%,#4b4b47 0 13%,transparent 14%),radial-gradient(ellipse at 75% 65%,#858078 0 10%,transparent 11%),radial-gradient(ellipse at 42% 78%,#383a39 0 12%,transparent 13%),radial-gradient(ellipse at 62% 82%,#55534e 0 9%,transparent 10%);filter:drop-shadow(0 8px 7px #0009);z-index:0}
+.charcoal-photo:after{background:linear-gradient(0deg,#0c1c2d55,transparent 65%)}
