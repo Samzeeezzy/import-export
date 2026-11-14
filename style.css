@@ -31,3 +31,21 @@
 @keyframes whatsappBob{0%,100%{translate:0 0}50%{translate:0 -5px}}
 @media(max-width:700px){.whatsapp-float{right:16px;bottom:17px;padding:12px 16px 12px 13px;font-size:11px}.whatsapp-float svg{width:23px;height:23px}}
 @media(prefers-reduced-motion:reduce){.whatsapp-float{animation:none}}
+
+
+/* Moving cargo photography strip */
+.cargo-motion{overflow:hidden;background:#f6f4ef;padding:82px 0 88px}
+.cargo-heading{display:flex;align-items:end;justify-content:space-between;gap:40px;margin-bottom:35px}
+.cargo-heading h2{font-size:clamp(34px,4vw,49px)}
+.cargo-heading>p{max-width:360px;margin:0 0 5px;color:var(--muted);font-size:13px;line-height:1.85}
+.cargo-marquee{width:100%;overflow:hidden;position:relative}
+.cargo-track{display:flex;gap:18px;width:max-content;animation:cargoGlide 48s linear infinite}
+.cargo-marquee:hover .cargo-track{animation-play-state:paused}
+.cargo-shot{position:relative;flex:0 0 330px;height:225px;overflow:hidden;border-radius:5px;background:#172b43}
+.cargo-shot:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,#071626b8,transparent 58%)}
+.cargo-shot img{width:100%;height:100%;display:block;object-fit:cover;transition:transform .7s ease}
+.cargo-shot:hover img{transform:scale(1.07)}
+.cargo-shot span{position:absolute;z-index:1;left:21px;bottom:18px;color:#fff;font-size:10px;font-weight:700;letter-spacing:.17em}
+@keyframes cargoGlide{from{transform:translateX(0)}to{transform:translateX(calc(-50% - 9px))}}
+@media(max-width:700px){.cargo-motion{padding:65px 0}.cargo-heading{display:block;margin-bottom:25px}.cargo-heading>p{margin-top:16px}.cargo-shot{flex-basis:270px;height:190px}.cargo-track{gap:13px;animation-duration:40s}}
+@media(prefers-reduced-motion:reduce){.cargo-track{animation:none}.cargo-marquee{overflow-x:auto}.cargo-shot img{transition:none}}
