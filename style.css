@@ -2,3 +2,23 @@
 @media(max-width:900px){.main-nav{gap:17px}.main-nav>a{font-size:10px}.nav-cta{padding:13px}.section-pad{padding:85px 0}.market-grid{gap:6%}.values-grid{grid-template-columns:repeat(2,1fr);row-gap:25px}.values-grid article:nth-child(2){border-right:0}.contact-grid{gap:5%}}
 @media(max-width:700px){.container{width:min(100% - 36px,560px)}.topbar-inner{font-size:8px;letter-spacing:.08em}.topbar-inner span:last-child{display:none}.site-header{height:72px}.menu-toggle{display:flex;flex-direction:column;gap:5px;padding:10px}.menu-toggle span{width:23px;height:2px;background:var(--navy)}.main-nav{display:none;position:absolute;top:72px;left:0;right:0;background:white;padding:18px 24px 25px;box-shadow:0 15px 25px #11182718;flex-direction:column;align-items:stretch;gap:0}.main-nav.open{display:flex}.main-nav>a{padding:14px 0;border-bottom:1px solid #f0eee9;font-size:12px}.main-nav .nav-cta{padding:15px;margin-top:12px;text-align:center}.hero{min-height:650px;background-position:58% center}.hero-shade{background:linear-gradient(90deg,rgba(8,20,34,.94),rgba(8,20,34,.64))}.hero-content{padding:75px 0}.hero h1{font-size:clamp(45px,12vw,66px)}.hero-copy{font-size:13px}.hero-actions{align-items:flex-start;flex-direction:column;gap:22px}.hero-note{margin-top:65px;font-size:8px}.hero-index{display:none}.intro-grid,.market-grid,.contact-grid{grid-template-columns:1fr;gap:35px}.intro-copy{padding-top:0}.section-heading{display:block}.section-heading>p{margin-top:20px}.service-grid{grid-template-columns:1fr}.product-grid{grid-template-columns:1fr 1fr}.product-photo{height:190px}.service-card{min-height:0}.service-card p{min-height:0}.market-image{min-height:360px;order:2}.market-content{order:1}.check-list{grid-template-columns:1fr 1fr;gap:15px}.product-grid{grid-template-columns:1fr}.product-photo{height:220px}.values-grid{grid-template-columns:1fr 1fr}.values-grid article{padding-right:14px;margin-right:14px}.values-grid article:nth-child(2){margin:0}.values-grid article:nth-child(3){border-right:1px solid var(--line)}.values-grid article:nth-child(4){border:0;margin:0}.cta-inner{align-items:flex-start;flex-direction:column;gap:30px}.field-row{grid-template-columns:1fr;gap:0}.quote-form{padding:25px 20px}.footer-main{align-items:flex-start;gap:25px;flex-wrap:wrap}.footer-main>p{font-size:16px}.footer-bottom{gap:12px;flex-direction:column;font-size:8px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important;animation:none!important}}
+
+/* Why Nexora — floating circular signature */
+.why-intro{display:grid;grid-template-columns:260px 1fr;align-items:center;gap:70px;margin-bottom:58px}
+.why-orbit{width:220px;height:220px;position:relative;display:grid;place-items:center;margin:0 auto;animation:whyFloat 5s ease-in-out infinite}
+.why-orbit:before{content:"";position:absolute;inset:22px;border-radius:50%;background:linear-gradient(145deg,#172d46,#0d1b2c);box-shadow:0 22px 45px #101f3226,inset 0 0 0 1px #c6a66b70}
+.orbit-ring{position:absolute;inset:4px;border:1px solid #c6a66b9c;border-radius:50%;transform:rotate(-18deg) scaleX(.88)}
+.orbit-ring-inner{inset:14px;border-color:#c6a66b45;transform:rotate(35deg) scaleX(.9)}
+.why-circle-text{position:relative;z-index:2;text-align:center;color:#e6d5b3;font:500 12px/1.6 Manrope;letter-spacing:.22em}
+.why-circle-text strong{font-size:17px;letter-spacing:.16em;color:#fff}
+.orbit-dot{position:absolute;z-index:3;width:12px;height:12px;border-radius:50%;background:var(--gold);top:22px;right:25px;box-shadow:0 0 0 6px #c6a66b25}
+.why-heading-copy{max-width:610px}
+.why-heading-copy>p:last-child{max-width:390px;color:var(--muted);font-size:13px;line-height:1.85;margin:20px 0 0}
+@keyframes whyFloat{0%,100%{transform:translateY(0) rotate(-2deg)}50%{transform:translateY(-13px) rotate(2deg)}}
+.values-grid article{padding:27px 22px 20px;background:#faf9f6;border:1px solid #ece8df;border-radius:18px;margin:0;transition:transform .35s ease,box-shadow .35s ease,border-color .35s ease}
+.values-grid article:hover{transform:translateY(-8px);box-shadow:0 18px 35px #172b4312;border-color:#d8c39d}
+.values-grid{border:0;gap:16px}
+.values-grid article>span{margin-bottom:22px}
+@media(max-width:900px){.why-intro{grid-template-columns:210px 1fr;gap:35px}.why-orbit{width:190px;height:190px}}
+@media(max-width:700px){.why-intro{grid-template-columns:1fr;gap:30px;text-align:center;margin-bottom:38px}.why-orbit{width:190px;height:190px}.why-heading-copy>p:last-child{margin:18px auto 0}.values-grid{gap:12px}.values-grid article{padding:22px 16px 16px}}
+@media(prefers-reduced-motion:reduce){.why-orbit{animation:none}}
